@@ -11,7 +11,7 @@ source:
   sha256: d3573eb1df9d516c75994a8a82108b6c7a5ca7ea8a9af60b38f3f65c3e227fa7
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,7 +20,7 @@ requirements:
     - {{ compiler("cxx") }}
   host:
     - cython
-    - numpy 1.21
+    - numpy
     - pip
     - scikit-learn >=0.24.0,<0.25
     - python
@@ -51,7 +51,7 @@ test:
 about:
   home: https://github.com/sebp/scikit-survival
   summary: Survival analysis built on top of scikit-learn
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_file: COPYING
 
 extra:
