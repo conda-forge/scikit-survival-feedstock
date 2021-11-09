@@ -51,7 +51,7 @@ test:
 about:
   home: https://github.com/sebp/scikit-survival
   summary: Survival analysis built on top of scikit-learn
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_file: COPYING
 
 extra:
