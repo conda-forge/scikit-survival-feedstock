@@ -27,6 +27,7 @@ requirements:
     - numpy
     - pip
     - scikit-learn >=1.0.0,<1.1
+    - packaging
     - python
   run:
     - python
