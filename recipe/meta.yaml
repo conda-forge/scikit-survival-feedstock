@@ -1,5 +1,5 @@
 {% set name = "scikit-survival" %}
-{% set version = "0.17.0" %}
+{% set version = "0.17.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scikit-survival-{{ version }}.tar.gz
-  sha256: ba49325f6a31e8bdccfb88337aa85218d209e88a6a704e9c41ef13bf749e0f46
+  sha256: 4b1fab7992816da863915828f210bc10fe6f32c4619e9af01a32ae990a87f379
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -27,6 +27,7 @@ requirements:
     - numpy
     - pip
     - scikit-learn >=1.0.0,<1.1
+    - packaging
     - python
   run:
     - python
