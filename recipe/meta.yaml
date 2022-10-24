@@ -1,5 +1,5 @@
 {% set name = "scikit-survival" %}
-{% set version = "0.19.0" %}
+{% set version = "0.19.0.post1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scikit-survival-{{ version }}.tar.gz
-  sha256: 5f13814864792c46d748384a46e928622536088561eac45f9f73c6edefea0805
+  sha256: 5018540a9457c9de602f169fdfcc01511a360c8a1480c9913a88061776f05899
 
 build:
   number: 0
