@@ -1,5 +1,5 @@
 {% set name = "scikit-survival" %}
-{% set version = "0.21.0" %}
+{% set version = "0.22.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scikit-survival-{{ version }}.tar.gz
-  sha256: adc744b65983dced8142ec31465389fc738405d589051251e5447aad9a1e02bc
+  sha256: 16dd07839885f526fd5523ac14c81f02f73836c6a6db5ea4cede57bf68b292ff
 
 build:
   number: 0
@@ -34,7 +34,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - scikit-learn >=1.2.0,<1.3
+    - scikit-learn >=1.3.0,<1.4
     - importlib_resources >=1.3  # [py <= 38]
     - ecos
     - joblib
