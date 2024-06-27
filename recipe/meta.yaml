@@ -11,7 +11,7 @@ source:
   sha256: 0e9c86750c0de1580662675110994f07a3568955aef14af81316f2b3100332bf
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<38]
 
@@ -22,6 +22,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler("c") }}
+    - {{ stdlib("c") }}
     - {{ compiler("cxx") }}
   host:
     - cython
@@ -33,7 +34,6 @@ requirements:
     - python
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - scikit-learn >=1.3.0,<1.4
     - importlib_resources >=1.3  # [py <= 38]
     - ecos
