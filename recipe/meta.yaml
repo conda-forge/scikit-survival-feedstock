@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scikit_survival-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scikit_survival-{{ version }}.tar.gz
   sha256: 9ee5835e6bd74eab69aac0e71511cc4c033d085bed609e5da771dac053ff7e27
 
 build:
