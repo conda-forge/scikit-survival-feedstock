@@ -30,6 +30,7 @@ requirements:
     - pip
     - scikit-learn >=1.4.0,<1.5  # [py<313]
     - scikit-learn >=1.5.0,<1.6  # [py>=313]
+    - setuptools
     - setuptools_scm
     - packaging
     - python
