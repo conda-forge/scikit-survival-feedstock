@@ -9,6 +9,8 @@ Package license: GPL-3.0-or-later
 
 Summary: Survival analysis built on top of scikit-learn
 
+Documentation: https://scikit-survival.readthedocs.io/
+
 Current build status
 ====================
 
