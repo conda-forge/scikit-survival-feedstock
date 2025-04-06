@@ -1,0 +1,73 @@
+context:
+  name: scikit-survival
+  version: 0.24.1
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scikit_survival-${{ version }}.tar.gz
+  sha256: 059ca5911f980e44f69951baf08efc8d7a7cf1adba7a5422580ef65330cfd88e
+
+build:
+  number: 1
+  script:
+    - python -m pip install . -vv
+  skip: match(python, "<3.10")
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - cython
+        - numpy
+    - ${{ compiler("cxx") }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler("cxx") }}
+  host:
+    - cython
+    - numpy
+    - pip
+    - scikit-learn >=1.6.1,<1.7
+    - setuptools
+    - setuptools_scm
+    - packaging
+    - python
+  run:
+    - python
+    - scikit-learn >=1.6.1,<1.7
+    - ecos
+    - joblib
+    - numexpr
+    - osqp !=0.6.0,!=0.6.1
+    - pandas >=1.4.0
+    - scipy >=1.3.2
+
+tests:
+  - python:
+      imports:
+        - sksurv
+        - sksurv.datasets
+        - sksurv.ensemble
+        - sksurv.io
+        - sksurv.kernels
+        - sksurv.linear_model
+        - sksurv.meta
+        - sksurv.svm
+        - sksurv.tree
+
+about:
+  homepage: https://github.com/sebp/scikit-survival
+  summary: Survival analysis built on top of scikit-learn
+  documentation: https://scikit-survival.readthedocs.io
+  license: GPL-3.0-or-later
+  license_file: COPYING
+
+extra:
+  recipe-maintainers:
+    - sebp
+    - janjagusch
+    - xhochy
