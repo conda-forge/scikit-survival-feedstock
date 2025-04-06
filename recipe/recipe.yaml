@@ -11,7 +11,7 @@ source:
   sha256: 059ca5911f980e44f69951baf08efc8d7a7cf1adba7a5422580ef65330cfd88e
 
 build:
-  number: 0
+  number: 1
   script:
     - python -m pip install . -vv
   skip: match(python, "<3.10")
