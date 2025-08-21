@@ -1,6 +1,6 @@
 context:
   name: scikit-survival
-  version: 0.24.1
+  version: 0.25.0
 
 package:
   name: ${{ name|lower }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scikit_survival-${{ version }}.tar.gz
-  sha256: 059ca5911f980e44f69951baf08efc8d7a7cf1adba7a5422580ef65330cfd88e
+  sha256: 8d4bfb4977012c533f99c0fb4b53eaf42958db6294b0c901618bb3c21b092dd4
 
 build:
-  number: 1
+  number: 0
   script:
     - python -m pip install . -vv
   skip: match(python, "<3.10")
@@ -31,18 +31,18 @@ requirements:
     - cython
     - numpy
     - pip
-    - scikit-learn >=1.6.1,<1.7
+    - scikit-learn >=1.7.0,<1.8
     - setuptools
     - setuptools_scm
     - packaging
     - python
   run:
     - python
-    - scikit-learn >=1.6.1,<1.7
+    - scikit-learn >=1.6.1,<1.8
     - ecos
     - joblib
     - numexpr
-    - osqp !=0.6.0,!=0.6.1
+    - osqp !=0.6.0,!=0.6.1,<1
     - pandas >=1.4.0
     - scipy >=1.3.2
 
