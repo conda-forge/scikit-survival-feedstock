@@ -14,7 +14,9 @@ build:
   number: 0
   script:
     - python -m pip install . -vv
-  skip: match(python, "<3.10")
+  skip:
+    - match(python, "<3.10")
+    - match(python, ">=3.14")
 
 requirements:
   build:
