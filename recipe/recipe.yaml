@@ -32,7 +32,9 @@ requirements:
     - cython
     - numpy
     - pip
-    - scikit-learn >=1.6.1,<1.7
+    - if: match(python, "<3.14")
+      then: scikit-learn >=1.6.1,<1.7
+      else: scikit-learn >=1.7.0,<1.8
     - setuptools
     - setuptools_scm
     - packaging
